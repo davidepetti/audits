@@ -71,7 +71,7 @@ Manual review.
 
 You can implement in `setPassword()` the same check you have in `getPassword()`.
 
-```solidity
+```diff
 function setPassword(string memory newPassword) external {
 +       if (msg.sender != s_owner) {
 +           revert PasswordStore__NotOwner();
