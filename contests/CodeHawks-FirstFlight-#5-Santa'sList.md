@@ -7,13 +7,10 @@
 - ## High Risk Findings
   - ### [H-01. Anyone can call `SantasList::buyPresent()` and burn the token of others to collect a present](#H-01)
   - ### [H-02. Incorrect Solmate library imported causing bad behaviors](#H-02)
-  - ### [H-03. Santa cannot mints themselves tokens](#H-03)
-  - ### [H-04. The first value of `SantasList::Status` is `NICE` making everyone `NICE` by default](#H-04)
-  - ### [H-05. `SantasList::checkList()` is missing the `SantasList::onlySanta` modifier giving anyone the opportunity to change `Status`](#H-05)
+  - ### [H-03. The first value of `SantasList::Status` is `NICE` making everyone `NICE` by default](#H-04)
+  - ### [H-04. `SantasList::checkList()` is missing the `SantasList::onlySanta` modifier giving anyone the opportunity to change `Status`](#H-05)
 - ## Medium Risk Findings
   - ### [M-01. `2e18` should be used as present cost and not `1e18`](#M-01)
-- ## Low Risk Findings
-  - ### [L-01. Missing important events](#L-01)
 
 # <a id='contest-summary'></a>Contest Summary
 
@@ -137,7 +134,7 @@ Manual review.
 
 Use the correct Solmate library that you can find at the following link [Solmate](https://github.com/transmissions11/solmate)
 
-## <a id='H-04'></a>H-04. The first value of `SantasList::Status` is `NICE` making everyone `NICE` by default
+## <a id='H-03'></a>H-03. The first value of `SantasList::Status` is `NICE` making everyone `NICE` by default
 
 ### Relevant GitHub Links
 
@@ -176,7 +173,7 @@ enum Status {
 
 By making `NOT_CHECKED_TWICE` the first value, you ensure a more logical default status for individuals who have not yet been checked.
 
-## <a id='H-05'></a>H-05. `SantasList::checkList()` is missing the `SantasList::onlySanta` modifier giving anyone the opportunity to change `Status`
+## <a id='H-04'></a>H-04. `SantasList::checkList()` is missing the `SantasList::onlySanta` modifier giving anyone the opportunity to change `Status`
 
 ### Relevant GitHub Links
 
